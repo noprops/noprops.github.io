@@ -85,3 +85,9 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+markdown: kramdown
+
+kramdown:
+   input: GFM
+   hard_wrap: false
