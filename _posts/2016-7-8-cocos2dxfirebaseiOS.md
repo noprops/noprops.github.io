@@ -6,7 +6,7 @@ title: cocos2d-x v3.10にFirebase導入(iOS)
 [このページ](https://firebase.google.com/docs/ios/setup?hl=ja)を参考にして、CocoaPodsで入れる。
 AppController.mmは下のように書く。
 
-<code>
+~~~ Objective-C
 #import "Firebase.h"
 
 @implementation AppController
@@ -18,14 +18,12 @@ AppController.mmは下のように書く。
 static AppDelegate s_sharedApplication;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-
     //中略
-
     app->run();
     [FIRApp configure];
     return YES;
 }
-</code>
+~~~
 
 ![1]({{site.baseurl}}/images/2016-07-08_1.png)
 ![2]({{site.baseurl}}/images/2016-07-08_2.png)
