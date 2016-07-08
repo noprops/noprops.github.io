@@ -3,7 +3,7 @@ layout: post
 title: cocos2d-x v3.10でadmob表示(iOS)
 ---
 
-[cocos2d-xにFirebase導入(iOS)]({{site.baseurl}}/cocos2dxadmobiOS/)
+[cocos2d-xにFirebase導入(iOS)]({{site.baseurl}}/cocos2dxfirebaseiOS/)
 
 AppController.mm
 {% highlight Objective-C %}
@@ -45,7 +45,9 @@ static AppDelegate s_sharedApplication;
 
 GADBannerViewのプロパティ宣言して、admobで取得したアドユニットIDを設定する。
 実機テストすると、
+
 <Google> To get test ads on this device, call: request.testDevices = @[ @"デバイスID" ];
+
 というログが出るので、それをテストデバイスIDとして設定すると、
 そのデバイスではテスト広告が出るようになる。
 
