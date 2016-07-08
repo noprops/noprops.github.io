@@ -37,3 +37,5 @@ Targets->Build Settings->Other Linker Flagsに`$(inherited)`を追加する。
 Targets->Build Phases->Link Binary With LibrariesからGameController.frameworkを入れると解決する。
 
 ![3]({{site.baseurl}}/images/2016-07-08_3.png)
+
+[cocos2d-xでadmob表示(iOS)]({{site.baseurl}}/_posts/)
