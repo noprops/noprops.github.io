@@ -45,7 +45,9 @@ static AppDelegate s_sharedApplication;
 
 GADBannerViewのプロパティ宣言して、admobで取得したアドユニットIDを設定する。
 実機テストすると、
+
 `<Google> To get test ads on this device, call: request.testDevices = @[ @"デバイスID" ];`
+
 というログが出るので、それをテストデバイスIDとして設定すると、
 そのデバイスではテスト広告が出るようになる。
 
