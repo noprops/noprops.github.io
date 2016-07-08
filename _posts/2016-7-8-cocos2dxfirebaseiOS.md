@@ -33,4 +33,7 @@ target->buildsetting->other linker flagに`$(inherited)`を追加する。
 ビルドするとまた以下の画像のようなGCがなんとかいうエラーが出る。
 
 ![2]({{site.baseurl}}/images/2016-07-08_2.png)
+
+GameController.frameworkを入れるとビルド成功する。
+
 ![3]({{site.baseurl}}/images/2016-07-08_3.png)
