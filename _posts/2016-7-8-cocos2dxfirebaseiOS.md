@@ -26,14 +26,14 @@ static AppDelegate s_sharedApplication;
 {% endhighlight %}
 
 ビルドするとなんかエラーが出るので、
-target->buildsetting->other linker flagに`$(inherited)`を追加する。
+Targets->Build Settings->Other Linker Flagsに`$(inherited)`を追加する。
 
 ![1]({{site.baseurl}}/images/2016-07-08_1.png)
 
-ビルドするとまた以下の画像のようなGCがなんとかいうエラーが出る。
+ビルドするとまた以下の画像のようなGCControllerがなんとかいうエラーが出る。
 
 ![2]({{site.baseurl}}/images/2016-07-08_2.png)
 
-GameController.frameworkを入れるとビルド成功する。
+Targets->Build Phases->Link Binary With LibrariesからGameController.frameworkを入れると解決する。
 
 ![3]({{site.baseurl}}/images/2016-07-08_3.png)
