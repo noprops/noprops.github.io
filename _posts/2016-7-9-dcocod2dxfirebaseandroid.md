@@ -25,7 +25,7 @@ Android Studio->Preferences->Build,~~->Instant Runからオフにする。
 ![1]({{site.baseurl}}/images/2016-07-09_1.png)
 
 Firebaseコンソールでアプリを登録して、
-google-services.jsonを取得する。
+`google-services.json`を取得する。
 それをappフォルダに入れる。
 
 ![2]({{site.baseurl}}/images/2016-07-09_2.png)
