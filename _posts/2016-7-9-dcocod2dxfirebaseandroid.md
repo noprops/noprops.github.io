@@ -7,7 +7,7 @@ title: cocos2d-x v3.10にFirebase導入(Android)
 
 [cocos2d-x v3.10でadmob表示(iOS)]({{site.baseurl}}/2cocos2dxadmobiOS/)
 
-[cocos2d-x v3.10でadmobインタースティシャル表示(iOS)]({{site.baseurl}}/cocos2dxinterstitialiOS/)
+[cocos2d-x v3.10でadmobインタースティシャル表示(iOS)]({{site.baseurl}}/cocos2dxadmobinterstitial/)
 
 Android Studioを開き、Open an existing android studio projectで
 プロジェクト名/proj.android-studioフォルダを開く。
@@ -170,6 +170,8 @@ AppActivityのshowIntersAd()を呼ぶ、jniのメソッドを作る。
 srcフォルダを右クリックして、new->java classで
 com.domain.appname.PlatformUtilというファイルを作る。
 はじめのcom.domain.appnameの部分は、アプリのpackageと同じにする。
+
+![5]({{site.baseurl}}/images/2016-07-09_5.png)
 
 {% highlight java %}
 package info.mygames888.escapeFromEscapeGame;
