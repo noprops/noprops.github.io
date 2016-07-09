@@ -14,7 +14,6 @@ Android Studioを開き、Open an existing android studio projectで
 
 SDKManagerでインストールした最新のNDKだとcocos2d-xが対応していなくてビルドエラーになるので、
 r10dをダウンロードして使う。(cocos2d-x v3.10を使っています。)
-[android ndk r10d](http://dl.google.com/android/ndk/android-ndk-r10d-darwin-x86_64.bin)
 参考：[過去のリビジョンのNDKを入手する方法](http://qiita.com/kishi-yama/items/1dab24942c12b9971d3e)
 
 cocos2d-xのフォルダに移動して./setup.pyでNDK_ROOTを設定しておく。
@@ -33,6 +32,13 @@ Firebaseコンソールでアプリを登録して、
 プロジェクト下のbuild.gradleのdependenciesに、
 `classpath 'com.google.gms:google-services:3.0.0'`
 と書く。
+
+{% highlight java %}
+dependencies {
+    classpath 'com.android.tools.build:gradle:x.x.x'
+    classpath 'com.google.gms:google-services:3.0.0'
+}
+{% endhighlight %}
 
 ![3]({{site.baseurl}}/images/2016-07-09_3.png)
 
@@ -55,6 +61,7 @@ gradleを変更したら、syncする。
 
 app/src/org.cocos2dx.cpp/AppActivity.javaを変更する。
 バナーとインタースティシャルを表示する。
+参考：[Cocos2d-x 3.5 AdMobのバナー広告を実装する(iOS, Android)](http://studio.cretia.net/blog/344)
 
 {% highlight java %}
 package org.cocos2dx.cpp;
@@ -247,5 +254,6 @@ bool PlatformUtil::isTablet()
 
 PlatformUtil.cppは、XCodeの右ペインのTarget Membershipのチェックボックスを全部外して、
 iOSではビルドされないようにする。
+
 これで、任意のタイミングでPlatformUtil::showIntersAd()を呼べば、
 Androidでもインタースティシャル広告が出る。
