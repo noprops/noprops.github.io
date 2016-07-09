@@ -132,3 +132,5 @@ void PlatformUtil::showIntersAd()
 {% endhighlight %}
 
 あとは任意の場所で`PlatformUtil::showIntersAd()`と書けばインタースティシャル広告が出る。
+
+[次Android]({{site.baseurl}}/dcocod2dxfirebaseandroid/)
