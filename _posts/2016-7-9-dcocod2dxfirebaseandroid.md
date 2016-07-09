@@ -38,7 +38,7 @@ Firebaseコンソールでアプリを登録して、
 
 appフォルダ以下のbuild.gradleを以下のように変更する。
 
-{% highlight %}
+{% highlight java %}
 dependencies {
   // ...
   compile 'com.google.firebase:firebase-core:9.2.0'
