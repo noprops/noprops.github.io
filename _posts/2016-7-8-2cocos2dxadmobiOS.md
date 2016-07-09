@@ -3,7 +3,7 @@ layout: post
 title: cocos2d-x v3.10でadmob表示(iOS)
 ---
 
-[cocos2d-xにFirebase導入(iOS)]({{site.baseurl}}/cocos2dxfirebaseiOS/)
+[cocos2d-xにFirebase導入(iOS)]({{site.baseurl}}/1cocos2dxfirebaseiOS/)
 
 AppController.mm
 {% highlight Objective-C %}
@@ -54,3 +54,5 @@ GADBannerViewのプロパティ宣言して、admobで取得したアドユニ�
 ![4]({{site.baseurl}}/images/2016-07-08_4.png)
 
 参考：[Cocos2d-x 3.5 AdMobのバナー広告を実装する(iOS, Android)](http://studio.cretia.net/blog/344)
+
+次：[cocos2d-x v3.10でadmobインタースティシャル広告表示(iOS)]({{site.baseurl}}/cocos2dxadmobinterstitial/)
