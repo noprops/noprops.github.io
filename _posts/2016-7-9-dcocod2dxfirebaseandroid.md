@@ -13,7 +13,8 @@ Android Studioを開き、Open an existing android studio projectで
 プロジェクト名/proj.android-studioフォルダを開く。
 
 SDKManagerでインストールした最新のNDKだとcocos2d-xが対応していなくてビルドエラーになるので、
-r10dをダウンロードして使う。(cocos2d-x v3.10を使っています。)
+r10dをダウンロードして使う。(cocos2d-x v3.10使用)
+
 参考：[過去のリビジョンのNDKを入手する方法](http://qiita.com/kishi-yama/items/1dab24942c12b9971d3e)
 
 cocos2d-xのフォルダに移動して./setup.pyでNDK_ROOTを設定しておく。
@@ -30,7 +31,9 @@ Firebaseコンソールでアプリを登録して、
 ![2]({{site.baseurl}}/images/2016-07-09_2.png)
 
 プロジェクト下のbuild.gradleのdependenciesに、
+
 `classpath 'com.google.gms:google-services:3.0.0'`
+
 と書く。
 
 {% highlight java %}
@@ -60,7 +63,9 @@ apply plugin: 'com.google.gms.google-services'
 gradleを変更したら、syncする。
 
 app/src/org.cocos2dx.cpp/AppActivity.javaを変更する。
+
 バナーとインタースティシャルを表示する。
+
 参考：[Cocos2d-x 3.5 AdMobのバナー広告を実装する(iOS, Android)](http://studio.cretia.net/blog/344)
 
 {% highlight java %}
