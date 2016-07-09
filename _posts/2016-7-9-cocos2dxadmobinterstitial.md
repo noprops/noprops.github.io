@@ -3,8 +3,8 @@ layout: post
 title: cocos2d-x v3.10でadmobインタースティシャル広告表示(iOS)
 ---
 
-[cocos2d-xにFirebase導入(iOS)]({{site.baseurl}}/cocos2dxfirebaseiOS/)
-[cocos2d-x v3.10でadmob表示(iOS)]({{site.baseurl}}/cocos2dxadmobiOS/)
+[cocos2d-xにFirebase導入(iOS)]({{site.baseurl}}/1cocos2dxfirebaseiOS/)
+[cocos2d-x v3.10でadmob表示(iOS)]({{site.baseurl}}/2cocos2dxadmobiOS/)
 
 AppController.hでshowInterstitialAdというメソッドを宣言する。
 AppController.h
