@@ -1,6 +1,6 @@
 ---
 layout: post
-title: cocos2d-x v3.10にFirebase導入(Android)
+title: cocos2d-x v3.10にFirebase導入してadmobのバナーとインタースティシャル表示(Android)
 ---
 
 [cocos2d-xにFirebase導入(iOS)]({{site.baseurl}}/1cocos2dxfirebaseiOS/)
