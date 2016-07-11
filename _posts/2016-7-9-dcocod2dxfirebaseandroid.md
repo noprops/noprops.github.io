@@ -99,8 +99,6 @@ public class AppActivity extends Cocos2dxActivity {
         super.onCreate(savedInstanceState);
         _instance = this;
 
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
         FrameLayout.LayoutParams adParams = new FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.WRAP_CONTENT,
                 FrameLayout.LayoutParams.WRAP_CONTENT);
