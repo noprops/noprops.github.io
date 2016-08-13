@@ -105,7 +105,7 @@ public class AppActivity extends Cocos2dxActivity {
         adParams.gravity = (Gravity.BOTTOM | Gravity.CENTER); // 最下部中央へ表示
 
         _adView = new AdView(this);
-        _adView.setAdSize(AdSize.BANNER);
+        _adView.setAdSize(AdSize.SMART_BANNER);
         _adView.setAdUnitId(BANNER_AD_UNIT_ID);
 
         AdRequest adRequest = new AdRequest.Builder()
@@ -161,7 +161,9 @@ public class AppActivity extends Cocos2dxActivity {
     }
     @Override
     protected void onDestroy() {
-        _adView.destroy();
+        if (_adView != null) {
+            _adView.destroy();
+        }
         super.onDestroy();
     }
 }
