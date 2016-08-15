@@ -13,7 +13,7 @@ Android Studioを開き、Open an existing android studio projectで
 プロジェクト名/proj.android-studioフォルダを開く。
 
 SDKManagerでインストールした最新のNDKだとcocos2d-xが対応していなくてビルドエラーになるので、
-r10dをダウンロードして使う。(cocos2d-x v3.10使用)
+r10dをダウンロードして使う。(cocos2d-x v3.10使用 v3.12ならr11c)
 
 参考：[過去のリビジョンのNDKを入手する方法](http://qiita.com/kishi-yama/items/1dab24942c12b9971d3e)
 
@@ -81,6 +81,7 @@ import com.google.android.gms.ads.*;
 
 public class AppActivity extends Cocos2dxActivity {
     static AdView _adView;
+    static final String APP_ID = "アプリID";
     static final String BANNER_AD_UNIT_ID = "バナーのアドユニットID";
 
     static InterstitialAd _interstitialAd;
@@ -98,6 +99,8 @@ public class AppActivity extends Cocos2dxActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         _instance = this;
+        
+        MobileAds.initialize(getApplicationContext(),APP_ID);
 
         FrameLayout.LayoutParams adParams = new FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.WRAP_CONTENT,
@@ -168,6 +171,10 @@ public class AppActivity extends Cocos2dxActivity {
     }
 }
 {% endhighlight %}
+
+`MobileAds.initialize(getApplicationContext(),APP_ID);`
+で初期化するのに使うAPP_IDは、アドユニットIDとは違うので注意。
+Admob管理画面の右上の歯車ボタンを押して、アプリ管理画面から取得できる。
 
 interstitial.isLoaded()はmainUIスレッドで呼ばれないとクラッシュするので、
 このように書いてある。
