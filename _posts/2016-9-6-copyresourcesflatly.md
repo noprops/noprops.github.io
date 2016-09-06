@@ -49,7 +49,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 いちいち相対パスを書いたりsearchPathにフォルダ名を全て追加するのが
 面倒くさい場合がある。
 
-今回は、Resources/folderA以下のサブフォルダの中身を全て展開して、assetsフォルダにコピーされるようにしたい。
+そこで、Resources/folderA以下のサブフォルダの中身を全て展開して、assetsフォルダにコピーされるようにしたい。
 つまり、コピー後のassetsフォルダは下図のようになる。
 
 ![1]({{site.baseurl}}/images/2016-09-06_assets.png)
