@@ -11,13 +11,13 @@ cocos compile -p android --android-studio
 としてAndroidプロジェクトをビルドするとResourcesフォルダの中身が全て
 proj.android-studio/app/assetsフォルダにコピーされる。
 
-上の図でfというファイルを使いたいとすると、XCodeでfというファイル名を指定すればiOSでは使える。
+上の図でfというファイルを使いたいとすると、iOSでは、fというファイル名を指定すれば使える。
 
 {% highlight C++ %}
 Sprite* sprite = Sprite::createWithSpriteFrameName("f.png");
 {% endhighlight %}
 
-しかし、これではAndroidでビルドした時にエラーになる。
+しかし、これではAndroidで実行した時にエラーになる。
 Androidでは、サブフォルダの中にあるファイルをファイル名だけで指定することはできない。
 
 解決方法は２つある。
@@ -49,8 +49,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 いちいち相対パスを書いたりsearchPathにフォルダ名を全て追加するのが
 面倒くさい場合がある。
 
-今回は、Resources/folderA以下のサブフォルダの中身を全て展開して、assetsフォルダにコピーしたいと思う。
-つまり、assetsフォルダは下図のようになる。
+今回は、Resources/folderA以下のサブフォルダの中身を全て展開して、assetsフォルダにコピーされるようにしたい。
+つまり、コピー後のassetsフォルダは下図のようになる。
 
 ![1]({{site.baseurl}}/images/2016-09-06_assets.png)
 
@@ -72,6 +72,7 @@ excludeの部分を追記した。
 これによってfolderAはassetsにコピーされなくなる。
 
 次にproj.android-studio/app/build.gradleを変更する。
+
 {% highlight gradle %}
 task copyAssets(type: Copy) {
     from fileTree('../../Resources/folderA').files
