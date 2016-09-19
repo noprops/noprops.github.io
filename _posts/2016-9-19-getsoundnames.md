@@ -22,6 +22,7 @@ Resources/seフォルダ内のmp3ファイル名一覧を取得して、soundNam
 
 Target->Build Phasesを開き、
 左上の+ボタンを押してNew Run Script Phaseを追加する。
+
 ![2]({{site.baseurl}}/images/2016-09-19-2.png)
 
 {% highlight shell %}
@@ -36,9 +37,11 @@ done
 
 このRun Script PhaseはCopy Bundle Resourcesの上に移動する。
 
+![3]({{site.baseurl}}/images/2016-09-19-3.png)
+
 これで、ビルドした時にsoundNames.txtに音声ファイル名が書き込まれる。
 
-![3]({{site.baseurl}}/images/2016-09-19-3.png)
+![4]({{site.baseurl}}/images/2016-09-19-4.png)
 
 あとは、アプリ起動時にsoundNames.txtから読み込んだファイル名を指定してpreloadする。
 
