@@ -1,6 +1,6 @@
 ---
 layout: post
-title: cocos2d-xのiOSプロジェクトにFirebaseを入れた時、ld: library not found for -lGoogleToolboxForMacというエラーが出る
+title: cocos2d-xのiOSプロジェクトにFirebaseを入れるとld: library not found for -lGoogleToolboxForMac
 ---
 
 cocos2d-xのiOSプロジェクトに3.8以降のFirebaseを導入すると、ビルド時に
