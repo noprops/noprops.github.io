@@ -3,7 +3,7 @@ layout: post
 title: cocos2d-xにFirebaseを入れるとエラー
 ---
 
-cocos2d-xのiOSプロジェクトに3.8以降のFirebaseを導入すると、ビルド時に
+cocos2d-xのiOSプロジェクトにCocoapodsで3.8以降のFirebaseを導入すると、ビルド時に
 ld: library not found for -lGoogleToolboxForMac
 というエラーが出た。
 
