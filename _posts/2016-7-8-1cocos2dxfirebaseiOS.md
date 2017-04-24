@@ -38,4 +38,11 @@ Targets->Build Phases->Link Binary With LibrariesからGameController.framework�
 
 ![3]({{site.baseurl}}/images/2016-07-08_3.png)
 
+ビルドしてまた
+ld: library not found for -lGoogleToolboxForMac
+というエラーが出たら、
+target->Build Settings->Library Search Pathsに$(inherited)を入れる。
+
+![1]({{site.baseurl}}/images/2016-12-31_1.png)
+
 [cocos2d-xでadmob表示(iOS)]({{site.baseurl}}/2cocos2dxadmobiOS/)
